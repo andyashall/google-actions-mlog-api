@@ -57,7 +57,7 @@ app.post('/webhook', (req, res) => {
             speech: "Logged in as " + name + ".",
             displayText: "Logged in as " + name + ".",
             data: {},
-            contextOut: [{name:"userId", lifespan:10, parameters: {userId: uid}}],
+            contextOut: [{name:"userId", lifespan:120, parameters: {userId: uid}}],
             source: "",
             followupEvent: {}
           }
@@ -96,7 +96,7 @@ app.post('/webhook', (req, res) => {
           speech: "Meeting opened: " + mt,
           displayText: "Meeting opened: " + mt,
           data: {},
-          contextOut: [{name:"meetingId", lifespan:10, parameters: {meetingId: mid}}],
+          contextOut: [{name:"meetingId", lifespan:120, parameters: {meetingId: mid}}],
           source: "",
           followupEvent: {}
         }
@@ -433,7 +433,7 @@ app.post('/webhook', (req, res) => {
           speech: "Meeting created",
           displayText: "Meeting created",
           data: {},
-          contextOut: [{name:"meetingId", lifespan:10, parameters: {meetingId: mid}}],
+          contextOut: [{name:"meetingId", lifespan:120, parameters: {meetingId: mid}}],
           source: "",
           followupEvent: {}
         }
